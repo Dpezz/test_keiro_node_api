@@ -2,7 +2,7 @@
 
 This is a starter template for api node projects.
 
-## How to use this template
+## How to use it
 
 Required:
 
