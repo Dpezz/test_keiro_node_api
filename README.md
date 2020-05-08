@@ -11,7 +11,7 @@ Required:
 
 ```bash
 # init project
-$ cd test_keiro_node_api/
+$ cd test_keiron_node_api/
 $ npm install
 
 # configure files
@@ -19,11 +19,13 @@ $ npm install
   database/database.json
 
 # run migrate and seed `sequelize`:
+$ ./node_modules/.bin/sequelize db:create #create database
 $ ./node_modules/.bin/sequelize db:migrate #run migrate
 $ ./node_modules/.bin/sequelize db:seed:all #run seeders
 
 - or -
 
+npx sequelize-cli db:create #create database
 npx sequelize-cli db:migrate #run migrate
 npx sequelize-cli db:seed:all #run seeders
 
