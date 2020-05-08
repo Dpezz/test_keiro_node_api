@@ -18,5 +18,5 @@ app.use("/api", require("./routes"));
 const domain = process.env.APP_URL,
     port = process.env.APP_PORT;
 app.listen(port, function () {
-    console.log(`Node server running on ${domain}: ${port}`);
+    console.log(`Node server running on ${domain}:${port}`);
 });
