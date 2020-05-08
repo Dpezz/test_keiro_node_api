@@ -11,6 +11,7 @@ module.exports = (sequelize, Sequelize) => {
                 allowNull: false,
                 validate: {
                     notNull: true,
+                    notEmpty: true,
                 },
             },
             email: {
@@ -20,6 +21,7 @@ module.exports = (sequelize, Sequelize) => {
                 validate: {
                     isEmail: true,
                     notNull: true,
+                    notEmpty: true,
                 },
             },
             password: {
@@ -27,6 +29,7 @@ module.exports = (sequelize, Sequelize) => {
                 allowNull: false,
                 validate: {
                     notNull: true,
+                    notEmpty: true,
                 },
             },
             type_user_id: {
@@ -34,6 +37,7 @@ module.exports = (sequelize, Sequelize) => {
                 allowNull: false,
                 validate: {
                     notNull: true,
+                    notEmpty: true,
                     isInt: true,
                 },
             },
