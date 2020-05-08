@@ -1,3 +1,5 @@
+"use strict";
+
 const bcrypt = require("bcrypt");
 const { User, TypeUser } = require("../models");
 const userRepository = require("../repositories/user");
@@ -42,16 +44,20 @@ exports.register = async (req, res) => {
             message: "Register failed. Wrong type_user_id.",
         });
     } else {
-        const user = await User.create(req.body);
-        userRepository
-            .find(user.id)
-            .then((data) => {
-                const token = authService.setToken(data);
-                res.send(token);
-            })
-            .catch((err) => {
-                res.send(err);
-            });
+        try {
+            const user = await User.create(req.body);
+            userRepository
+                .find(user.id)
+                .then((data) => {
+                    const token = authService.setToken(data);
+                    res.send(token);
+                })
+                .catch((err) => {
+                    res.send(err);
+                });
+        } catch (err) {
+            res.status(400).send(err);
+        }
     }
 };
 

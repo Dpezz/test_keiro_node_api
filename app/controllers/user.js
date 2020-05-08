@@ -1,3 +1,5 @@
+"use strict";
+
 const userRepository = require("../repositories/user");
 
 const all = (req, res) => {

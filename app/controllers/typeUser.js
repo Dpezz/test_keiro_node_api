@@ -1,3 +1,5 @@
+"use strict";
+
 const typeUserRepository = require("../repositories/typeUser");
 
 exports.all = (req, res) => {

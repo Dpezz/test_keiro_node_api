@@ -1,3 +1,5 @@
+"use strict";
+
 const ticketRepository = require("../repositories/ticket");
 const authService = require("../services/auth");
 
