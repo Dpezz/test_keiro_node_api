@@ -21,7 +21,7 @@ exports.setToken = (data) => {
             },
             process.env.APP_KEY,
             {
-                expiresIn: "1440",
+                expiresIn: "1d",
             }
         ),
     };
